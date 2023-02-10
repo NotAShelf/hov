@@ -8,9 +8,6 @@ import (
 	"strconv"
 
 	schema "notashelf.dev/hov/data/schema"
-
-	"fyne.io/fyne/v2/app"
-	"fyne.io/fyne/v2/widget"
 )
 
 func main() {
@@ -73,6 +70,7 @@ func get_workspaces() {
 	}
 }
 
+/*
 func build_window() {
 	a := app.New()
 	w := a.NewWindow("Hello World")
@@ -80,3 +78,4 @@ func build_window() {
 	w.SetContent(widget.NewLabel("Hello World!"))
 	w.ShowAndRun()
 }
+*/
