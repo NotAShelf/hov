@@ -40,4 +40,4 @@ This will require a lot of math and I am not sure - I suck at math.
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the GPL-3.0 License - see the [LICENSE](LICENSE) file for details
