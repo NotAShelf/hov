@@ -25,13 +25,10 @@ func main() {
 		fmt.Println("Hyprland instance Signature: " + signature + "\n")
 	}
 
-	// get_workspaces()
+	get_workspaces()
 
-	a := app.New()
-	w := a.NewWindow("Hello World")
+	// build_window() // will not work until fyne merges wayland support
 
-	w.SetContent(widget.NewLabel("Hello World!"))
-	w.ShowAndRun()
 }
 
 func get_workspaces() {
@@ -44,8 +41,9 @@ func get_workspaces() {
 		fmt.Println("Error: ", err)
 	}
 
-	// print json output
-	//fmt.Println(string(out))
+	if len(os.Args) > 1 && os.Args[1] == "--debug" {
+		fmt.Println(string(out))
+	}
 
 	// unmarshal json output into a slice of structs
 	var client schema.Client
@@ -73,4 +71,12 @@ func get_workspaces() {
 
 		fmt.Println(clientslice)
 	}
+}
+
+func build_window() {
+	a := app.New()
+	w := a.NewWindow("Hello World")
+
+	w.SetContent(widget.NewLabel("Hello World!"))
+	w.ShowAndRun()
 }
